@@ -15,6 +15,6 @@ class DayCounterWorker(
         val currentValue = sharedPreferencesHelper.read(applicationContext)
         val counter = currentValue + 1
         val result = sharedPreferencesHelper.write(applicationContext, counter)
-        return Result.retry()
+        return Result.success()
     }
 }
